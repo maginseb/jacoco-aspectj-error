@@ -1,0 +1,11 @@
+<aspectj>
+
+    <aspects>
+        <aspect name="de.example.ExampleAspect"/>
+    </aspects>
+
+    <weaver options="-verbose -showWeaveInfo">
+        <include within="de.example..*"/>
+    </weaver>
+
+</aspectj>
