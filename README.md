@@ -1,5 +1,9 @@
 # Problem
 
+**There are two workarounds for this problem suggested https://github.com/eclipse/org.aspectj/issues/170**
+
+**Workarounds are implemented in the profiles ```no-inline``` and ```exclude-aspect```** 
+
 Running newer versions of JaCoCo together with AspectJ LTW fails during weaving due to an unknown constant type 17. Please execute ```mvn clean verify``` to reproduce the problem.
 
 ```
