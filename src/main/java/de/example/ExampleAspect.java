@@ -10,14 +10,14 @@ public class ExampleAspect {
     @Around("execution(String de.example.Example.sayHello(..))")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("Around Example");
-        return joinPoint.proceed();
+        return joinPoint.proceed(joinPoint.getArgs());
     }
 
 
     @Around("(execution(void de.example.CharArrayContainer.setCharArray(char[]))) && args(s)")
     public void aroundField(ProceedingJoinPoint joinPoint, char[] s) throws Throwable {
         System.out.println("Around Field");
-        joinPoint.proceed();
+        joinPoint.proceed(joinPoint.getArgs());
     }
 
 }
